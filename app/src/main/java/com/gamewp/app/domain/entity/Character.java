@@ -4,13 +4,29 @@ import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+@ApiModel
 public class Character extends Base {
+    @ApiModelProperty(value = "name", example = "Albedo")
     private String name;
+    
+    @ApiModelProperty(value = "title", example = "Kreideprinz")
     private String title;
+    
+    @ApiModelProperty(value = "vision", example = "Geo")
     private String vision;
+
+    @ApiModelProperty(value = "weapon", example = "Sword")
     private String weapon;
+    
+    @ApiModelProperty(value = "nation", example = "Mondstadt")
     private String nation;
+
+    @ApiModelProperty(value = "rarity", example = "5")
     private int rarity;
+    
+    @ApiModelProperty(value = "birthday", example = "2004-09-13")
     private LocalDate birthday;
 
     @JsonIgnore

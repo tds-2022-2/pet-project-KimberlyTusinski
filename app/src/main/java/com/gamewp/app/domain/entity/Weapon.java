@@ -1,14 +1,35 @@
 package com.gamewp.app.domain.entity;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel
 public class Weapon extends Base {
+    @ApiModelProperty(value = "name", example = "Akuoumaru")
     private String name;
+
+    @ApiModelProperty(value = "type", example = "Claymore")
     private String type;
+    
+    @ApiModelProperty(value = "rarity", example = "4")
     private int rarity;
+    
+    @ApiModelProperty(value = "baseAttack", example = "42")
     private int baseAttack;
+    
+    @ApiModelProperty(value = "subStat", example = "ATK")
     private String subStat;
+    
+    @ApiModelProperty(value = "passiveName", example = "Watatsumi Wavewalker")
     private String passiveName;
+    
+    @ApiModelProperty(value = "passiveDesc", example = "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.12/0.15/0.18/0.21/0.24%. A maximum of 40/50/60/70/80% increased Elemental Burst DMG can be achieved this way.")
     private String passiveDesc;
+    
+    @ApiModelProperty(value = "location", example = "Gacha")
     private String location;
+    
+    @ApiModelProperty(value = "ascensionMaterial", example = "distantant-sea")
     private String ascensionMaterial;
 
     public Weapon() {

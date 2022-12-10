@@ -3,7 +3,10 @@ package com.gamewp.app.domain.entity;
 import java.util.UUID;
 import java.util.regex.Pattern;
 
+import io.swagger.annotations.ApiModelProperty;
+
 public class Base {
+    @ApiModelProperty(hidden = true)
     private UUID id;
     
     public UUID getId() {
